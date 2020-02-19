@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="496.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TeachController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="View/Search Staff">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtSearchTeach" alignment="CENTER" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="406.0" promptText="Search Staff" />
+                        <TableView fx:id="tbleTeacher" layoutY="59.0" prefHeight="312.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0">
+                          <columns>
+                            <TableColumn fx:id="colTID" prefWidth="53.0" text="ID" />
+                            <TableColumn fx:id="colTname" prefWidth="97.0" text="Name" />
+                              <TableColumn fx:id="colTsurnam" prefWidth="75.0" text="Surname" />
+                              <TableColumn fx:id="colTgender" prefWidth="75.0" text="Gender" />
+                              <TableColumn fx:id="colTdob" prefWidth="75.0" text="D.O.B" />
+                              <TableColumn fx:id="colTnatioId" prefWidth="89.0" text="National ID" />
+                              <TableColumn fx:id="colTaddres" prefWidth="98.0" text="Address" />
+                              <TableColumn fx:id="colTcontctN" prefWidth="87.0" text="Contact No." />
+                              <TableColumn fx:id="colTstafDescr" prefWidth="109.0" text="Staff Description " />
+                              <TableColumn fx:id="colTentryDat" prefWidth="102.0" text="Entry Date" />
+                              <TableColumn fx:id="colTupdatDat" prefWidth="95.0" text="Update Date" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnVSTsearch" layoutX="508.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchTablBtn" text="Search" />
+                        <Button fx:id="btnVSTrefresh" layoutX="571.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshTabl" text="See All Data" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add Staff Members">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtATfname" layoutX="123.0" layoutY="40.0" prefHeight="25.0" prefWidth="151.0" />
+                        <TextField fx:id="txtATsurname" layoutX="418.0" layoutY="40.0" prefHeight="25.0" prefWidth="153.0" />
+                        <TextField fx:id="txtATnationID" layoutX="122.0" layoutY="153.0" prefHeight="25.0" prefWidth="153.0" />
+                        <TextField fx:id="txtATjobDescr" layoutX="122.0" layoutY="284.0" prefHeight="25.0" prefWidth="153.0" />
+                        <TextArea fx:id="txtATaddres" layoutX="121.0" layoutY="204.0" prefHeight="60.0" prefWidth="155.0" />
+                        <DatePicker fx:id="dtpATdob" layoutX="121.0" layoutY="99.0" prefHeight="25.0" prefWidth="155.0" />
+                        <RadioButton fx:id="rbATmale" layoutX="426.0" layoutY="103.0" mnemonicParsing="false" text="Male" />
+                        <RadioButton fx:id="rbATfemale" layoutX="486.0" layoutY="103.0" mnemonicParsing="false" text="Female" />
+                        <Label layoutX="31.0" layoutY="44.0" text="Full Name" />
+                        <Label layoutX="31.0" layoutY="103.0" text="D.O.B" />
+                        <Label layoutX="31.0" layoutY="157.0" text="National ID" />
+                        <Label layoutX="31.0" layoutY="204.0" text="Address" />
+                        <Label layoutX="31.0" layoutY="288.0" text="Job description" />
+                        <Label layoutX="349.0" layoutY="44.0" text="Surname" />
+                        <Label layoutX="349.0" layoutY="103.0" text="Gender" />
+                        <Button fx:id="btnATclear" layoutX="439.0" layoutY="315.0" mnemonicParsing="false" onAction="#staffBtnClear" prefHeight="36.0" prefWidth="58.0" text="Clear" />
+                        <Button fx:id="btnATsav" layoutX="439.0" layoutY="246.0" mnemonicParsing="false" onAction="#staffBtnSav" prefHeight="36.0" prefWidth="58.0" text="Save" />
+                        <TextField fx:id="txtATcontactN" layoutX="420.0" layoutY="153.0" />
+                        <Separator layoutX="635.0" layoutY="17.0" orientation="VERTICAL" prefHeight="378.0" prefWidth="31.0" />
+                        <Button fx:id="btnATsearch" layoutX="706.0" layoutY="162.0" mnemonicParsing="false" onAction="#searchToUpd" text="Search" />
+                        <Button fx:id="btnATupdate" layoutX="823.0" layoutY="162.0" mnemonicParsing="false" onAction="#staffBtnUpdate" text="Update" />
+                        <TextField fx:id="txtATsidSearch" layoutX="706.0" layoutY="112.0" prefHeight="25.0" prefWidth="153.0" />
+                        <Label layoutX="694.0" layoutY="76.0" text="Search and update record by S.ID" />
+                        <Label layoutX="349.0" layoutY="157.0" text="Contact No." />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

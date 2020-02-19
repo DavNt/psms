@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReportCardController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="View Results">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtVRtblSrch" layoutX="151.0" layoutY="14.0" promptText="Enter search key" />
+                        <TableView fx:id="tbleViewRes" layoutY="86.0" prefHeight="312.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0">
+                          <columns>
+                            <TableColumn fx:id="colVRid" prefWidth="42.0" text="ID" />
+                            <TableColumn fx:id="colVRsubjct" prefWidth="73.0" text="Subject" />
+                              <TableColumn fx:id="colVRstudID" prefWidth="77.0" text="Student ID" />
+                              <TableColumn fx:id="colVRmark" prefWidth="47.0" text="Mark" />
+                              <TableColumn fx:id="colVRremark" prefWidth="115.0" text="Remark" />
+                              <TableColumn fx:id="colVRclass" prefWidth="44.0" text="Class" />
+                              <TableColumn fx:id="colVRterm" prefWidth="43.0" text="Term" />
+                              <TableColumn fx:id="colVRyear" prefWidth="59.0" text="Year" />
+                              <TableColumn fx:id="colVRteachID" prefWidth="67.0" text="Teacher ID" />
+                              <TableColumn fx:id="colVRentryD" prefWidth="67.0" text="Entry Date" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnVRsrch" layoutX="315.0" layoutY="14.0" mnemonicParsing="false" text="Search" />
+                        <Button fx:id="btnVRtblRefrsh" layoutX="397.0" layoutY="14.0" mnemonicParsing="false" text="Refresh" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add Student Results">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cmbASRsubjCod" layoutX="101.0" layoutY="60.0" prefWidth="150.0" />
+                        <TextField fx:id="txtASRmark" layoutX="103.0" layoutY="143.0" />
+                        <Button fx:id="btnASRclr" layoutX="306.0" layoutY="73.0" mnemonicParsing="false" text="Clear" />
+                        <ComboBox fx:id="cmbASRstudID" layoutX="102.0" layoutY="103.0" prefWidth="150.0" />
+                        <Label layoutX="12.0" layoutY="22.0" text="Teacher ID" />
+                        <TextField fx:id="txtASRremark" layoutX="103.0" layoutY="182.0" />
+                        <ComboBox fx:id="cmbASRgrade" layoutX="103.0" layoutY="225.0" prefWidth="150.0" />
+                        <ComboBox fx:id="cmbASRterm" layoutX="103.0" layoutY="265.0" prefWidth="150.0" />
+                        <TextField fx:id="txtASRyear" layoutX="104.0" layoutY="308.0" />
+                        <TextField fx:id="txtASRtchID" layoutX="102.0" layoutY="18.0" />
+                        <Label layoutX="14.0" layoutY="64.0" text="Subject Code" />
+                        <Label layoutX="14.0" layoutY="107.0" text="Student ID" />
+                        <Label layoutX="14.0" layoutY="147.0" text="Mark" />
+                        <Label layoutX="14.0" layoutY="186.0" text="Remark" />
+                        <Label layoutX="14.0" layoutY="229.0" text="Class/Grade" />
+                        <Label layoutX="14.0" layoutY="269.0" text="Term" />
+                        <Label layoutX="12.0" layoutY="312.0" text="Year" />
+                        <Label layoutX="456.0" layoutY="31.0" text="Edit Results" />
+                        <Button fx:id="btnASRsave" layoutX="306.0" layoutY="143.0" mnemonicParsing="false" text="Save" />
+                        <Button fx:id="btnASRupdate" layoutX="514.0" layoutY="102.0" mnemonicParsing="false" text="Update" />
+                        <Button fx:id="btnASReditSrch" layoutX="407.0" layoutY="102.0" mnemonicParsing="false" text="Search" />
+                        <TextField fx:id="txtASReditSrch" layoutX="412.0" layoutY="60.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

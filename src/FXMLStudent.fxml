@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="474.0" prefWidth="1259.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StudentController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tabVSstd" closable="false" text="View/Search Students">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtStdSearch" alignment="CENTER" layoutX="196.0" layoutY="14.0" prefHeight="25.0" prefWidth="212.0" promptText="Type keyword" />
+                        <Button fx:id="btnStdSearch" layoutX="429.0" layoutY="14.0" mnemonicParsing="false" onAction="#studBtnAct" text="Search" />
+                        <Button fx:id="btnStdTrefresh" layoutX="514.0" layoutY="14.0" mnemonicParsing="false" onAction="#studBtnAct" text="See All Students" />
+                        <TableView fx:id="stdTable" layoutY="60.0" prefHeight="389.0" prefWidth="748.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0">
+                          <columns>
+                            <TableColumn fx:id="colStdTid" prefWidth="55.0" text="ID" />
+                            <TableColumn fx:id="colStdTnam" prefWidth="95.0" text="Name" />
+                              <TableColumn fx:id="colStdTsurnam" prefWidth="75.0" text="Surname" />
+                              <TableColumn fx:id="colStdTgender" prefWidth="75.0" text="Gender" />
+                              <TableColumn fx:id="colStdTdob" prefWidth="75.0" text="D.O.B" />
+                              <TableColumn fx:id="colStdTnatID" prefWidth="75.0" text="National ID" />
+                              <TableColumn fx:id="colStdTaddres" prefWidth="75.0" text="Address" />
+                              <TableColumn fx:id="colStdTnokNam" prefWidth="86.0" text="N.O.K Name" />
+                              <TableColumn fx:id="colStdTnokSurnam" prefWidth="96.0" text="N.O.K Surname" />
+                              <TableColumn fx:id="colStdTnokContct" prefWidth="94.0" text="N.O.K Contact" />
+                              <TableColumn fx:id="colStdTnokNatID" prefWidth="110.0" text="N.O.K National ID" />
+                              <TableColumn fx:id="colStdTnokAddres" prefWidth="91.0" text="N.O.K Address" />
+                              <TableColumn fx:id="colStdTnokDescr" prefWidth="109.0" text="N.O.K Description" />
+                              <TableColumn fx:id="colStdTentryD" prefWidth="68.0" text="Entry Date" />
+                              <TableColumn fx:id="colStdTupdateD" prefWidth="79.0" text="Update Date" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabAUstd" closable="false" text="Add/Update Students">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtStdAnam" layoutX="113.0" layoutY="45.0" />
+                        <TextField fx:id="txtStdAsurnam" layoutX="113.0" layoutY="93.0" />
+                        <TextField fx:id="txtStdAnokNam" layoutX="542.0" layoutY="45.0" />
+                        <TextField fx:id="txtStdAnokSurnam" layoutX="542.0" layoutY="93.0" />
+                        <TextField fx:id="txtStdAnatID" layoutX="113.0" layoutY="235.0" />
+                        <TextField fx:id="txtStdAnokNatID" layoutX="542.0" layoutY="186.0" />
+                        <TextField fx:id="txtStdAnokContct" layoutX="542.0" layoutY="141.0" />
+                        <TextField fx:id="txtStdAnokDescr" layoutX="542.0" layoutY="235.0" />
+                        <TextArea fx:id="txtStdAnokAddres" layoutX="537.0" layoutY="279.0" prefHeight="64.0" prefWidth="186.0" />
+                        <Separator layoutX="366.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="449.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <TextArea fx:id="txtStdAaddres" layoutX="115.0" layoutY="279.0" prefHeight="64.0" prefWidth="186.0" />
+                        <DatePicker fx:id="dtpStdAdob" layoutX="113.0" layoutY="186.0" prefHeight="25.0" prefWidth="154.0" />
+                        <RadioButton fx:id="rbStdAsxFemale" layoutX="190.0" layoutY="145.0" mnemonicParsing="false" text="Female" />
+                        <RadioButton fx:id="rbStdAsxMale" layoutX="115.0" layoutY="145.0" mnemonicParsing="false" text="Male" />
+                        <Label layoutX="22.0" layoutY="49.0" text="Name" />
+                        <Label layoutX="22.0" layoutY="97.0" text="Surname" />
+                        <Label layoutX="22.0" layoutY="145.0" text="Gender" />
+                        <Label layoutX="22.0" layoutY="190.0" text="D.O.B" />
+                        <Label layoutX="22.0" layoutY="239.0" text="National ID" />
+                        <Label layoutX="22.0" layoutY="290.0" text="Address" />
+                        <Label layoutX="101.0" layoutY="14.0" text="Students Details">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="523.0" layoutY="14.0" text="Next Of Keen (N.O.K) Details">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="442.0" layoutY="49.0" text="Name" />
+                        <Label layoutX="442.0" layoutY="97.0" text="Surname" />
+                        <Label layoutX="442.0" layoutY="145.0" text="Contact No." />
+                        <Label layoutX="442.0" layoutY="190.0" text="National ID" />
+                        <Label layoutX="442.0" layoutY="239.0" text="Description" />
+                        <Label layoutX="442.0" layoutY="290.0" text="Address" />
+                        <Separator layoutX="754.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="449.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="btnStdAclear" layoutX="816.0" layoutY="131.0" mnemonicParsing="false" onAction="#studBtnAct" prefHeight="45.0" prefWidth="74.0" text="Clear" />
+                        <Button fx:id="btnStdAsave" layoutX="816.0" layoutY="200.0" mnemonicParsing="false" onAction="#studBtnAct" prefHeight="45.0" prefWidth="74.0" text="Save" />
+                        <Button fx:id="btnStdUpdSearch" layoutX="1008.0" layoutY="199.0" mnemonicParsing="false" onAction="#studBtnAct" text="Search" />
+                        <Button fx:id="btnStdUpdUpdate" layoutX="1107.0" layoutY="199.0" mnemonicParsing="false" onAction="#studBtnAct" text="Update" />
+                        <TextField fx:id="txtStdSeUpsearc" layoutX="1007.0" layoutY="150.0" />
+                        <Label layoutX="1008.0" layoutY="110.0" text="Search/Update by Stud.ID">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="937.0" layoutY="49.0" orientation="VERTICAL" prefHeight="325.0" prefWidth="12.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

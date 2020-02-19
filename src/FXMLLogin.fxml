@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane prefHeight="362.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+    <children>
+      <Label fx:id="lblLgForgotPas" layoutX="137.0" layoutY="243.0" text="Forgot Password" underline="true" />
+          <TextField fx:id="nameInput" alignment="CENTER" layoutX="40.0" layoutY="124.0" prefHeight="25.0" prefWidth="283.0" promptText="Username" />
+      <PasswordField fx:id="passInput" alignment="CENTER" layoutX="40.0" layoutY="162.0" prefHeight="25.0" prefWidth="283.0" promptText="Password" />
+            <Button fx:id="exitBtn" layoutX="107.0" layoutY="198.0" mnemonicParsing="false" onAction="#lginBtnExit" text="Exit" />
+            <Button fx:id="loginButton" layoutX="226.0" layoutY="198.0" mnemonicParsing="false" onAction="#loginBtnAct" text="Log In" />
+      <Button fx:id="btnLgNwUsr" layoutX="141.0" layoutY="294.0" mnemonicParsing="false" onAction="#newUsrBtn" text="New user" />
+          <Label fx:id="lblErrors" layoutX="111.0" layoutY="331.0" text="Label" />
+          <ImageView fitHeight="101.0" fitWidth="321.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resource/psmspic.jpg" />
+         </image>
+      </ImageView>
+    </children>
+
+</AnchorPane>

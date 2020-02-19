@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SubjctsController">
+   <children>
+      <TabPane layoutY="7.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="View Subject">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnSubjSearch" layoutX="196.0" layoutY="14.0" mnemonicParsing="false" text="Search" />
+                        <TextField fx:id="txtSubjSrch" layoutX="37.0" layoutY="14.0" promptText="Type to search" />
+                        <Button fx:id="btnSubjRefr" layoutX="261.0" layoutY="14.0" mnemonicParsing="false" text="Refresh" />
+                        <TableView fx:id="tableSubj" layoutX="12.0" layoutY="171.0" prefHeight="322.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
+                          <columns>
+                            <TableColumn fx:id="colSubjCod" prefWidth="75.0" text="Code" />
+                            <TableColumn fx:id="colSubjNam" prefWidth="75.0" text="Name" />
+                              <TableColumn fx:id="colSubjDescr" prefWidth="75.0" text="Description" />
+                              <TableColumn fx:id="colSubjEntry" prefWidth="75.0" text="Entry Date" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add Subject">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtASubjCod" layoutX="128.0" layoutY="26.0" />
+                        <TextField fx:id="txtASubjNam" layoutX="128.0" layoutY="73.0" />
+                        <TextField fx:id="txtASubjDescr" layoutX="128.0" layoutY="121.0" />
+                        <Label layoutX="16.0" layoutY="30.0" text="Subject Code" />
+                        <Label layoutX="14.0" layoutY="77.0" text="Subject Name" />
+                        <Label layoutX="14.0" layoutY="125.0" text="Subject Description" />
+                        <Button fx:id="btnASubjSav" layoutX="189.0" layoutY="161.0" mnemonicParsing="false" text="Save" />
+                        <Button fx:id="btnASubjClr" layoutX="76.0" layoutY="161.0" mnemonicParsing="false" text="Clear" />
+                        <TextField fx:id="txtASubjCodSrch" layoutX="341.0" layoutY="47.0" prefHeight="25.0" prefWidth="107.0" />
+                        <Separator layoutX="287.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="259.0" prefWidth="28.0" />
+                        <Button fx:id="btnASubjUpdat" layoutX="405.0" layoutY="94.0" mnemonicParsing="false" text="Update" />
+                        <Button fx:id="btnASubjSrch" layoutX="335.0" layoutY="94.0" mnemonicParsing="false" text="Search" />
+                        <Label layoutX="354.0" layoutY="22.0" text="Search by code" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

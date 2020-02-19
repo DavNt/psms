@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
+   <children>
+      <VBox>
+         <children>
+            <ImageView fitHeight="152.0" fitWidth="669.0" nodeOrientation="INHERIT" pickOnBounds="true">
+               <image>
+                  <Image url="@resource/d.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Button fx:id="btnTeachw" layoutX="43.0" layoutY="308.0" mnemonicParsing="false" onAction="#homBtnAction" prefHeight="89.0" prefWidth="139.0" text="Staff" />
+      <Button fx:id="btnStudw" layoutX="43.0" layoutY="179.0" mnemonicParsing="false" onAction="#homBtnAction" prefHeight="89.0" prefWidth="139.0" text="Students" />
+      <Button fx:id="btnStudResw" layoutX="463.0" layoutY="179.0" mnemonicParsing="false" onAction="#homBtnAction" prefHeight="89.0" prefWidth="139.0" text="Student Results" />
+      <Button fx:id="btnClasw" layoutX="252.0" layoutY="308.0" mnemonicParsing="false" onAction="#homBtnAction" prefHeight="89.0" prefWidth="139.0" text="Classes" />
+      <Button fx:id="btnSubjw" layoutX="252.0" layoutY="179.0" mnemonicParsing="false" onAction="#homBtnAction" prefHeight="89.0" prefWidth="139.0" text="Subjects" />
+      <Button fx:id="btnUserw" layoutX="463.0" layoutY="308.0" mnemonicParsing="false" onAction="#homBtnAction" prefHeight="89.0" prefWidth="139.0" text="Users" />
+      <Button fx:id="btnLogout" layoutX="590.0" layoutY="127.0" mnemonicParsing="false" onAction="#homBtnAction" text="Log out" />
+      <Pane layoutX="3.0" layoutY="510.0" prefHeight="25.0" prefWidth="654.0">
+         <children>
+            <Label fx:id="lblStatus" layoutX="454.0" layoutY="4.0" text="status" />
+            <Label fx:id="lblUserLog" layoutX="36.0" layoutY="4.0" text="user" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
